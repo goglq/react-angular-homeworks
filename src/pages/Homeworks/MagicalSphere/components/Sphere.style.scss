@@ -1,0 +1,129 @@
+$magical-sphere-radius: 40rem;
+
+.magical-sphere {
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	width: $magical-sphere-radius;
+	height: $magical-sphere-radius;
+
+	border-radius: 50%;
+
+	background: linear-gradient(rgb(53, 55, 150), rgb(6, 10, 46));
+
+	cursor: pointer;
+
+	&.disabled {
+		cursor: default;
+	}
+
+	&::before {
+		content: '';
+
+		position: absolute;
+
+		width: calc($magical-sphere-radius - 50px);
+		height: calc($magical-sphere-radius - 50px);
+
+		border-radius: 50%;
+
+		background: linear-gradient(
+			rgba(210, 211, 243, 0.3),
+			rgba(20, 19, 78, 0.5)
+		);
+
+		transform: rotateZ(45deg);
+
+		filter: blur(25px);
+	}
+
+	&::after {
+		content: '';
+
+		position: absolute;
+		bottom: -140px;
+
+		width: 90%;
+		height: 90px;
+
+		border-radius: 50%;
+
+		background-color: rgba(0, 0, 0, 0.301);
+
+		filter: blur(20px);
+	}
+
+	.display {
+		position: absolute;
+		top: 25%;
+		z-index: 1;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: calc($magical-sphere-radius - 60%);
+		height: calc($magical-sphere-radius - 60%);
+
+		border-radius: 50%;
+
+		box-shadow: inset -5px 5px 10px rgba(0, 0, 0, 0.501),
+			inset 10px -10px 20px rgba(170, 157, 180, 0.171),
+			3px -3px rgba(0, 0, 0, 0.24), -3px 3px rgba(255, 255, 255, 0.123);
+
+		background: linear-gradient(
+			rgba(160, 160, 160, 0.3),
+			rgba(0, 0, 0, 0.5)
+		);
+
+		overflow: hidden;
+
+		&::before {
+			content: '';
+
+			position: absolute;
+
+			width: calc(100% - 30px);
+			height: calc(100% - 30px);
+
+			border-radius: 50%;
+
+			background: linear-gradient(
+				rgba(182, 217, 221, 0.4),
+				rgba(30, 83, 94, 0.205)
+			);
+
+			filter: blur(25px);
+
+			transform: rotateZ(45deg);
+		}
+
+		.answering-anim {
+			animation: Answering 5500ms;
+		}
+
+		span {
+			text-align: center;
+			font-size: 1.5rem;
+			color: rgba(255, 255, 255, 0.644);
+		}
+	}
+}
+
+@keyframes Answering {
+	0%,
+	100% {
+		opacity: 0;
+		filter: blur(100px);
+		transform: scale(3);
+	}
+
+	20%,
+	50% {
+		filter: blur(0);
+		opacity: 1;
+		transform: scale(1);
+	}
+}
