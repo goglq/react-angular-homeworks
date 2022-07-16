@@ -1,0 +1,38 @@
+.prioritizer-column-container {
+	height: 100vh;
+}
+
+.prioritizer-column-container .wrapper {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-around;
+	height: 95%;
+
+	.dead-line {
+		position: absolute;
+		bottom: 800px;
+		height: 1rem;
+		width: 100%;
+
+		border-radius: 0.3rem;
+
+		background: white;
+
+		box-shadow: 0 2px 20px rgba(241, 209, 209, 0.1),
+			inset 0 0 10px rgba(233, 205, 205, 0.158);
+
+		.dead-line__text {
+			position: absolute;
+			bottom: 15px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			color: white;
+			font-size: 2rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+		}
+	}
+}

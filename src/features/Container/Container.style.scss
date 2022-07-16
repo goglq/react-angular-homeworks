@@ -1,0 +1,29 @@
+@import '@/styles/media';
+
+.container {
+	margin: 0 auto;
+
+	@include xs {
+		width: 100%;
+	}
+
+	@include sm {
+		width: 100%;
+	}
+
+	@include md {
+		width: 80%;
+	}
+
+	@include lg {
+		width: 80%;
+	}
+
+	@include xl {
+		width: 60%;
+	}
+
+	@include xxl {
+		width: 50%;
+	}
+}

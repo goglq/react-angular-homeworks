@@ -1,0 +1,10 @@
+.homework-link-list {
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: center;
+
+	* {
+		margin: 0 1rem 1rem 0;
+	}
+}
