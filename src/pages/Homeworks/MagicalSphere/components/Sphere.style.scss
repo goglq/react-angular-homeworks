@@ -108,6 +108,32 @@ $magical-sphere-radius: 40rem;
 			text-align: center;
 			font-size: 1.5rem;
 			color: rgba(255, 255, 255, 0.644);
+			opacity: 0;
+		}
+	}
+
+	.hint {
+		position: absolute;
+		bottom: 4rem;
+
+		font-size: 3rem;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 1rem;
+
+		color: white;
+
+		transition: 500ms ease-in-out;
+
+		opacity: 1;
+
+		text-shadow: 0 0 5px white;
+
+		&.asking {
+			transform: scale(0.5);
+			opacity: 0;
+			bottom: 0;
+			filter: blur(20px);
 		}
 	}
 }
@@ -118,6 +144,7 @@ $magical-sphere-radius: 40rem;
 		opacity: 0;
 		filter: blur(100px);
 		transform: scale(3);
+		bottom: 10;
 	}
 
 	20%,
