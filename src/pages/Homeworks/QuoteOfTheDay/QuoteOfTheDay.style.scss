@@ -1,0 +1,24 @@
+.quote-of-the-day-page {
+	width: 100vw;
+	height: 100vh;
+
+	background: radial-gradient(rgb(154, 183, 245), rgb(46, 75, 94));
+
+	.quote-of-the-day-btn {
+		position: absolute;
+
+		left: calc(50% - 3.5rem);
+		bottom: 200px;
+
+		transform: translateX(-50%, -50%);
+
+		font-size: 2rem;
+	}
+}
+
+@keyframes Echo {
+	0%,
+	50%,
+	100% {
+	}
+}
