@@ -1,0 +1,19 @@
+@import '@/styles/helpers';
+
+.magical-sphere-page {
+	width: 100vw;
+	height: 100vh;
+
+	background: radial-gradient(rgb(112, 71, 131), rgb(4, 5, 43));
+
+	.magical-sphere {
+		position: absolute;
+
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+	}
+
+	@include unselectable;
+}
