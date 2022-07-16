@@ -1,6 +1,6 @@
 import React from 'react';
 
-import randomIntFromInterval from '../lib/random';
+import randomIntFromInterval from '../../../lib/random';
 
 import PrioritizerColumnModel from '../object/PrioritizerColumnModel';
 import PrioritizerColumn from './PrioritizerColumn';

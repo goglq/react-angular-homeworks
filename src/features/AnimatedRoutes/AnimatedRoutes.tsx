@@ -3,12 +3,12 @@ import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router-dom';
 
 import { AnimatePresence } from 'framer-motion';
 
-import HomeworkMagicalSphere from '@/pages/HomeworkMagicalSphere';
+import HomeworkMagicalSphere from '@/pages/Homeworks/MagicalSphere';
 import HomeworkPrioritizer from '@/pages/HomeworkPrioritizer';
-import HomeworkQuoteOfTheDay from '@/pages/HomeworkQuoteOfTheDay';
-import HomeworkRandomNumberGenerator from '@/pages/HomeworkRandomNumberGenerator';
-import HomeworkTrafficLights from '@/pages/HomeworkTrafficLights';
-import HomeworkTrafficLightsClass from '@/pages/HomeworkTrafficLightsClass';
+import HomeworkQuoteOfTheDay from '@/pages/Homeworks/QuoteOfTheDay';
+import HomeworkRandomNumberGenerator from '@/pages/Homeworks/RandomNumberGenerator';
+import HomeworkTrafficLights from '@/pages/Homeworks/TrafficLights';
+import HomeworkTrafficLightsClass from '@/pages/Homeworks/TrafficLightsClass';
 import ReelPage from '@/pages/ReelPage';
 
 import { FadeTransition } from '@/features/Transition';
