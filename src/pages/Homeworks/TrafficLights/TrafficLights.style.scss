@@ -1,0 +1,15 @@
+.traffic-lights-page {
+	width: 100vw;
+	height: 100vh;
+
+	background: radial-gradient(rgb(224, 184, 110), rgb(85, 71, 30));
+
+	.traffic-lights {
+		position: absolute;
+
+		top: 50%;
+		left: 50%;
+
+		transform: translate(-50%, -50%);
+	}
+}
