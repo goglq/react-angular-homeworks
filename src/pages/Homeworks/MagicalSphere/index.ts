@@ -1,1 +1,1 @@
-export { default } from './MagicalSphere';
+export { default } from './MagicalSpherePage';
