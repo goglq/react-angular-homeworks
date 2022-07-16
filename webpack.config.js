@@ -27,15 +27,20 @@ module.exports = {
 				test: /\.(png|svg|jpg|jpeg|gif)$/i,
 				type: 'asset/resource',
 			},
+			{
+				test: /\.(csv|tsv)$/i,
+				use: ['csv-loader'],
+			},
 		],
 	},
 	devtool: 'inline-source-map',
 	devServer: {
 		static: path.resolve(__dirname, 'dist'),
 		historyApiFallback: true,
+		port: 5000,
 	},
 	resolve: {
-		extensions: ['.ts', '.tsx', '.scss', '.js'],
+		extensions: ['.ts', '.tsx', '.scss', '.js', '.csv'],
 		alias: {
 			'@': path.resolve(__dirname, 'src'),
 		},
