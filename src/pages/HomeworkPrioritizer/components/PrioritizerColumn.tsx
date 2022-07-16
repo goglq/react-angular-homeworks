@@ -30,7 +30,7 @@ const PrioritizerColumn: React.FC<PrioritizerColumnProps> = ({
 		}, 20);
 
 		return () => clearTimeout(timeout);
-	});
+	}, [amount]);
 
 	const handleClick = () => {
 		setAmount(Math.floor(amount / 2));
