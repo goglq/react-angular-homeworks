@@ -1,0 +1,18 @@
+.traffic-lights {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr;
+	row-gap: 1rem;
+
+	width: fit-content;
+
+	border-top-left-radius: 10rem;
+	border-top-right-radius: 10rem;
+	border-bottom-left-radius: 2rem;
+	border-bottom-right-radius: 2rem;
+
+	padding: 1rem;
+
+	background-color: rgb(65, 55, 4);
+
+	box-shadow: inset 0 0 0 5px rgba(0, 0, 0, 0.144);
+}
