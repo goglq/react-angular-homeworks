@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Container from '@/features/Container';
-import { Button } from '@/features/Button';
+import { BackButton, Button } from '@/features/Button';
 
 import './RandomNumberGenerator.style';
 import randomIntFromInterval from '@/lib/random';
@@ -18,6 +18,7 @@ const HomeworkRandomNumberGenerator: React.FC = () => {
 
 	return (
 		<div className="number-generator-page">
+			<BackButton>Back</BackButton>
 			<Container>
 				<form
 					className="number-generator-form"
