@@ -6,8 +6,9 @@ interface ButtonProps {
 	children?: JSX.Element | JSX.Element[] | string;
 	style?: React.CSSProperties;
 	className?: string;
-	onClick: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+	onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 	onAnimationEnd?: (e: React.AnimationEvent<HTMLButtonElement>) => void;
+	type?: 'submit' | 'reset' | 'button';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -16,6 +17,7 @@ const Button: React.FC<ButtonProps> = ({
 	style,
 	onClick,
 	onAnimationEnd,
+	type,
 }) => {
 	return (
 		<button
@@ -23,6 +25,7 @@ const Button: React.FC<ButtonProps> = ({
 			onClick={onClick}
 			onAnimationEnd={onAnimationEnd}
 			style={style}
+			type={type}
 		>
 			{children}
 		</button>
