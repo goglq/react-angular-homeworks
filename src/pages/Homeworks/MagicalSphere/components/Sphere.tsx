@@ -8,7 +8,7 @@ import Answers from '../data/answers.json';
 const randomAnswerIndex = () => randomIntFromInterval(0, Answers.length - 1);
 
 const MagicalSphere: React.FC = () => {
-	const [answer, setAnswer] = React.useState<string>('');
+	const [answer, setAnswer] = React.useState<string>();
 	const [isAnswering, setIsAnswering] = React.useState<boolean>(false);
 
 	const handleClick = () => {
@@ -18,22 +18,27 @@ const MagicalSphere: React.FC = () => {
 	};
 
 	return (
-		<div
-			onClick={handleClick}
-			className={`magical-sphere ${isAnswering ? 'disabled' : ''}`}
-		>
-			<div className="display">
-				<span
-					className={isAnswering ? 'answering-anim' : ''}
-					onAnimationEnd={() => {
-						setIsAnswering(false);
-						setAnswer('');
-					}}
-				>
-					{answer || answer}
-				</span>
+		<>
+			<div
+				onClick={handleClick}
+				className={`magical-sphere ${isAnswering ? 'disabled' : ''}`}
+			>
+				<div className="display">
+					<span
+						className={isAnswering ? 'answering-anim' : ''}
+						onAnimationEnd={(e) => {
+							setIsAnswering(false);
+							setAnswer(undefined);
+						}}
+					>
+						{answer && isAnswering && answer}
+					</span>
+				</div>
+				<h2 className={`hint ${isAnswering ? 'asking' : ''}`}>
+					Click to Ask
+				</h2>
 			</div>
-		</div>
+		</>
 	);
 };
 
