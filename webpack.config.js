@@ -48,6 +48,8 @@ module.exports = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
+			inject: true,
+			title: 'React Homeworks Title',
 			template: path.resolve(__dirname, 'public', 'index.html'),
 		}),
 		new MiniCssExtractPlugin(),

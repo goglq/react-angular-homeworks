@@ -13,3 +13,11 @@ After you have installed all packages, you are ready to start the project with f
 ```bash
 npm run dev
 ```
+
+This command will start webpack dev server in development mode
+
+If you want to build project use next command
+
+```bash
+npm run build
+```
