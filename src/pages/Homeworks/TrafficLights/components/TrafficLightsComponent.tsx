@@ -1,7 +1,8 @@
 import React from 'react';
 
 import Light from './Light';
-import TrafficLightsContext, { TrafficColor } from './TrafficLightsContext';
+import TrafficLightsContext from './TrafficLightsContext';
+import { TrafficColor } from '@/objects/TrafficColor';
 
 import './TrafficLightsComponent.style';
 
