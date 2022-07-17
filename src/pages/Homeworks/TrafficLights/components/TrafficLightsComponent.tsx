@@ -14,25 +14,24 @@ const lightOrder = [
 ];
 
 const TrafficLightsComponent: React.FC = () => {
-	const [currentIndex, setCurrentIndex] = React.useState<number>(0);
+	let currentIndex = 0;
 
 	const [trafficColor, setTrafficColor] = React.useState<TrafficColor>(
 		lightOrder[currentIndex]
 	);
 
 	const changeColor = () => {
-		setCurrentIndex(currentIndex + 1);
-		if (currentIndex >= lightOrder.length - 1) {
-			console.log(currentIndex);
-			setCurrentIndex(0);
+		currentIndex += 1;
+		if (currentIndex >= lightOrder.length) {
+			currentIndex = 0;
 		}
 		setTrafficColor(lightOrder[currentIndex]);
 	};
 
 	React.useEffect(() => {
-		const timeout = setTimeout(changeColor, 1000);
-		return () => clearTimeout(timeout);
-	}, [trafficColor, currentIndex]);
+		const interval = setInterval(() => changeColor(), 2000);
+		return () => clearInterval(interval);
+	}, []);
 
 	return (
 		<TrafficLightsContext.Provider
