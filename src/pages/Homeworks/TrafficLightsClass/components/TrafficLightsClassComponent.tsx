@@ -43,7 +43,7 @@ export default class TrafficLightsClassComponent extends React.Component<
 			this.setState((state) => ({
 				trafficColor: this.order[this.currentIndex],
 			}));
-		}, 1000);
+		}, 2000);
 	}
 
 	componentWillUnmount() {
