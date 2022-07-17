@@ -1,10 +1,6 @@
 import React from 'react';
 
-export enum TrafficColor {
-	Red = 'red',
-	Yellow = 'yellow',
-	Green = 'green',
-}
+import { TrafficColor } from '@/objects/TrafficColor';
 
 export interface TrafficLightsContext {
 	trafficColor: TrafficColor;
