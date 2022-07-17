@@ -1,5 +1,7 @@
 # React Homeworks
 
+All finished homeworks are in master branch
+
 ## Usage
 
 First of all, you need to install all packages. To do this, type this command
